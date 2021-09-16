@@ -3,7 +3,7 @@
 
 int main(int argc, char** argv)
 {
-    printf("Test %d\n", 1);
+    
 
             lapack_complex_double inputs[] =
         {
@@ -21,8 +21,10 @@ int main(int argc, char** argv)
 
     
     int input_size = 2;
-
-    calc_square_colmajor(inputs, input_size, righthands_outputs);
+    int info;
+    info = calc_square_colmajor(inputs, input_size, righthands_outputs);
+    printf("Result info code: %d\n", info);
+    print_matrix_colmajor( "Solution should be: \n0.5+j0.5 \n0.0+j0.0\n\n", input_size, 1, righthands_outputs, input_size );
 
     return 0;
     }
