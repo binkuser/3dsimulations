@@ -1,9 +1,12 @@
 #include "lapack_shell.h"
+#include "bars.h"
 
 
 int main(int argc, char** argv)
 {
     
+    bars brs;
+
 
             lapack_complex_double inputs[] =
         {
