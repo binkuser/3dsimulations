@@ -1,4 +1,4 @@
-#3dsimulations
+# 3dsimulations
 
 ## Table of contents
 * [General info](#general-info)
