@@ -4,9 +4,27 @@
 
 int main(int argc, char** argv)
 {
-    
-    bars brs;
+    /* all sizes in meters, outputs in H */
+    bars* brs = bars_new();
+    double width = 1e-6; 
+    double length = 2.0 * width;
+    double height = width;
+    double apart = (1.0 + 1e-7) * width; /*includes width of bar 1, for 64 bit: (1 + 1e-7) times width seems minumum achievable distance*/
+    double length_shift = 0.0; /*includes length of bar 1 */
+    double height_shift = 0.0; /* includes height of bar 1 */
+    brs->a = width;
+    brs->b = height;
+    brs->l1 = length;
+    brs->d = width;
+    brs->c = height;
+    brs->l2 = length;
+    brs->E = apart;
+    brs->l3 = length_shift;
+    brs->P = height_shift;
 
+    
+printf("L1: %.8e L2: %.8e M: %.8e\n\n",Lb(brs, 1),Lb(brs, 2), Mb(brs));
+free(brs);
 
             lapack_complex_double inputs[] =
         {

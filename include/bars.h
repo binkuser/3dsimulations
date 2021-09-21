@@ -56,6 +56,8 @@ typedef struct BARS
 */
 } bars;
 
+double Mb(bars *b);
+double Lb(bars *b, int w); /*w=1: L of bar 1, w=2: L of bar 2*/
 
 int bars_calc(bars *, double);
 int bars_syn(bars *, double, int);

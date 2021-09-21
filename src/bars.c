@@ -141,7 +141,7 @@ static double Mb_fn(double x, double y, double z)
 
 
 /* (14) */
-static double Mb(bars *b)
+double Mb(bars *b)
 {
   double rslt, tmp;
   double q[5], r[5], s[5];
@@ -202,7 +202,7 @@ static double Mb(bars *b)
 }
 
 /* (20) */
-static double Lb(bars *b, int w)
+double Lb(bars *b, int w)
 {
   double rslt;
   double q[3], r[3], s[3];
@@ -416,7 +416,7 @@ void bars_free(bars *b)
 }
 */
 
-/*
+
 bars *bars_new()
 {
   bars *newb;
@@ -427,7 +427,7 @@ bars *bars_new()
       fprintf(stderr,"bars.c:bars_new(): malloc() failed\n");
       exit(1);
     }
-
+/*
   // Create the units 
   newb->units_xy = wc_units_new(WC_UNITS_LENGTH);
   newb->units_L = wc_units_new(WC_UNITS_INDUCTANCE);
@@ -438,7 +438,7 @@ bars *bars_new()
 
   // get the rest of the entries in sync
   bars_calc(newb, newb->freq);
-
+*/
   return(newb);
 }
-*/
+
