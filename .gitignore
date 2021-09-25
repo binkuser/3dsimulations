@@ -2,3 +2,4 @@
 *.a
 data/
 bin/
+move_svgs.sh
