@@ -14,6 +14,7 @@ gcc -o ./bin/3dsimulations.a ./bin/lapack_shell.o ./bin/3dsimulations.o  ./bin/b
 # clean
 rm ./bin/lapack_shell.o 
 rm ./bin/3dsimulations.o
+rm ./bin/bars.o
 
 # run
 ./bin//3dsimulations.a
