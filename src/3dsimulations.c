@@ -16,6 +16,7 @@
 
 #include "lapack_shell.h"
 #include "bars.h"
+#include <stdio.h>
 
 
 int main(int argc, char** argv)

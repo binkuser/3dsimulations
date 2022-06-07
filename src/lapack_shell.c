@@ -67,6 +67,13 @@ sudo apt-get install cblas
 #!/usr/bin/env bash
 gcc lapack_test.c -o lapack_test.a -lm -lblas -llapack -llapacke
 ./lapack_test.a
+
+
+installing LAPACKE on MinGW:
+install MSYS / MinGW
+Make sure Windows PATH includes C:\msys64\usr\bin (which contains pacman.exe)
+Execute: pacman -S mingw-w64-x86_64-lapack
+
 */
 
 #include "lapack_shell.h"
