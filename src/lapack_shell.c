@@ -85,7 +85,7 @@ Execute: pacman -S mingw-w64-x86_64-lapack
          printf( "\n %s\n", desc );
 
          for( i = 0; i < m; i++ ) {
-                 for( j = 0; j < n; j++ ) printf( " %6.2f + j%6.2f", crealf(mat[i*ldm+j]),cimagf(mat[i*ldm+j]) );
+                 for( j = 0; j < n; j++ ) printf( " %6.3f + j%6.3f", crealf(mat[i*ldm+j]),cimagf(mat[i*ldm+j]) );
                  printf( "\n" );
          }
  }
@@ -97,7 +97,7 @@ Execute: pacman -S mingw-w64-x86_64-lapack
          printf( "\n %s\n", desc );
 
          for( i = 0; i < m; i++ ) {
-                 for( j = 0; j < n; j++ ) printf( " %6.2f + j%6.2f", crealf(mat[i+j*ldm]),cimagf(mat[i+j*ldm]) );
+                 for( j = 0; j < n; j++ ) printf( " %6.3f + j%6.3f", crealf(mat[i+j*ldm]),cimagf(mat[i+j*ldm]) );
                  printf( "\n" );
          }
  }

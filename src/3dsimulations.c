@@ -77,5 +77,31 @@ free(brs);
     lapack_complex_double R13 = lapack_make_complex_double(260.0,0);
     lapack_complex_double R14 = lapack_make_complex_double(230.0,0);
 
+    lapack_complex_double _0 = lapack_make_complex_double(0.0,0.0);
+    lapack_complex_double _1 = lapack_make_complex_double(1.0,0.0);
+    
+    lapack_complex_double inputs2[] ={ /*colmajor*/
+        _0,_0,_0,_0,_0,_0,_0,_1,_0,_0,_0,_0,
+        -R1,R1,R1,_0,_0,_0,_0,_1,_0,_0,_0,_0,
+        _0,R2,_0,_0,_0,_0,_0,-_1,_1,_0,_0,_0,
+        _0,_0,-R4,_0,_0,_0,_0,_1,_0,_0,_0,_1,
+        _0,-R5,-R5,-R5,_0,_0,_0,_1,_0,_0,_1,-_1,
+        _0,_0,_0,-R6,_0,_0,_0,_0,-_1,_0,-_1,_0,
+        _0,-R7,_0,_0,-R7,-R7,_0,_0,_1,_0,_0,_1,
+        _0,_0,_0,-R7,_0,-R12,_0,_0,_1,_0,_0,-_1,
+        _0,_0,_0,_0,-R10,-R10,-R10,_0,_0,_0,_1,_1,
+        _0,_0,_0,_0,R11,_0,_0,_0,-_1,_1,_0,_0,
+        _0,_0,_0,_0,_0,_0,-R13,_0,_0,-_1,_0,-_1,
+        _0,_0,_0,_0,-R14,_0,-R14,_0,_0,_1,_0,_0,
+        };
+
+        lapack_complex_double righthands_outputs2[]={
+            U1,_0,_0,_0,_0,_0,_0,_0,_0,_0,_0,_0,
+        };
+
+    info = calc_square_colmajor(inputs2, 12, righthands_outputs2);
+    printf("Result info code: %d\n", info);
+    print_matrix_colmajor( "Solution: \n", 12, 1, righthands_outputs2, 12 );
+
     return 0;
     }
