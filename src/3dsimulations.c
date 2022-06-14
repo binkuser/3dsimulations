@@ -64,5 +64,18 @@ free(brs);
     printf("Result info code: %d\n", info);
     print_matrix_colmajor( "Solution should be: \n0.5+j0.5 \n0.0+j0.0\n\n", input_size, 1, righthands_outputs, input_size );
 
+    lapack_complex_double U1 = lapack_make_complex_double(10.0,0);
+    lapack_complex_double R1 = lapack_make_complex_double(750.0,0);
+    lapack_complex_double R2 = lapack_make_complex_double(800.0,0);
+    lapack_complex_double R4 = lapack_make_complex_double(260.0,0);
+    lapack_complex_double R5 = lapack_make_complex_double(1000.0,0);
+    lapack_complex_double R6 = lapack_make_complex_double(1000.0,0);
+    lapack_complex_double R7 = lapack_make_complex_double(300.0,0);
+    lapack_complex_double R10 = lapack_make_complex_double(900.0,0);
+    lapack_complex_double R11 = lapack_make_complex_double(190.0,0);
+    lapack_complex_double R12 = lapack_make_complex_double(1000.0,0);
+    lapack_complex_double R13 = lapack_make_complex_double(260.0,0);
+    lapack_complex_double R14 = lapack_make_complex_double(230.0,0);
+
     return 0;
     }
