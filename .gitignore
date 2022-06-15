@@ -5,3 +5,4 @@
 data/
 bin/
 move_svgs.sh
+.vscode/settings.json
